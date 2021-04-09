@@ -12,7 +12,7 @@ include::license-{license}.asciidoc[]
 Jakarta Contexts and Dependency Injection 3.0 (link:https://jakarta.ee/specifications/cdi/3.0/[CDI 3.0]) is an update to Jakarta Contexts and Dependency Injection 2.0 (link:https://jakarta.ee/specifications/cdi/3.0/[CDI 2.0]).
 
 Starting with version 2.0 CDI targets Java SE and Jakarta EE platforms.
-CDI in Java SE and CDI in a Jakarta EE container share the features defined in core CDI.
+CDI in Java SE and CDI in a Jakarta EE container share the features defined in the core CDI specification.
 
 [[doc_organisation]]
 
@@ -20,7 +20,7 @@ CDI in Java SE and CDI in a Jakarta EE container share the features defined in c
 
 This document is organized in 4 parts:
 
-* An introduction (this part), which is not part of the specification but introduces CDI concepts and give examples.
+* An introduction, which is not part of the specification but introduces CDI concepts and give examples.
 * The core CDI specification: <<part_1>>.
 * Specific CDI features for Java SE: <<part_2>>.
 * Specific CDI features for Jakarta EE: <<part_3>>.
@@ -28,13 +28,13 @@ This document is organized in 4 parts:
 
 === Major changes
 
-This CDI 3.0 includes a change in the base namespace used by the APIs from
+CDI 3.0 includes a change in the base namespace used by the APIs from
 javax to jakarta. For example, the `BeanManager` interface has moved from
 `javax.enterprise.inject.spi.BeanManager` to `jakarta.enterprise.inject.spi.BeanManager`.
 
-There is a new beans.xml 3.0 schema file has been added and the namespace of the
-beans_3_0.xsd schema file has changed from xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" to
-xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee".
+There is a new beans.xml 3.0 schema file that has been added and the namespace of the
+`beans_3_0.xsd` schema file has changed from `xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"` to
+`xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee"`.
 
 :numbered:
 <<<
