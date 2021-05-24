@@ -17,10 +17,9 @@
 
 package jakarta.enterprise.inject.spi;
 
-import java.util.Set;
-
 import jakarta.enterprise.context.spi.Contextual;
-import jakarta.enterprise.context.spi.CreationalContext;
+
+import java.util.Set;
 
 /**
  * <p>

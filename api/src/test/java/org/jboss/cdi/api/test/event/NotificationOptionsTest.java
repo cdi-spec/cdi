@@ -24,17 +24,11 @@ public class NotificationOptionsTest {
         assertEquals(timeout, options.get("timeout"));
         assertNull(options.getExecutor());
         assertNull(options.get("alpha"));
-        options = NotificationOptions.builder().set("foo", "bar").setExecutor(new Executor() {
-            @Override
-            public void execute(Runnable command) {
-            }
+        options = NotificationOptions.builder().set("foo", "bar").setExecutor(command -> {
         }).build();
         assertEquals("bar", options.get("foo"));
         assertNotNull(options.getExecutor());
-        options = NotificationOptions.ofExecutor(new Executor() {
-            @Override
-            public void execute(Runnable command) {
-            }
+        options = NotificationOptions.ofExecutor(command -> {
         });
         Executor executor = options.getExecutor();
         assertNotNull(executor);

@@ -25,19 +25,18 @@ import jakarta.enterprise.context.spi.Context;
 import jakarta.enterprise.context.spi.Contextual;
 import jakarta.enterprise.context.spi.CreationalContext;
 import jakarta.enterprise.event.Event;
-import jakarta.enterprise.event.ObserverException;
 import jakarta.enterprise.inject.AmbiguousResolutionException;
-import jakarta.enterprise.inject.InjectionException;
 import jakarta.enterprise.inject.Default;
+import jakarta.enterprise.inject.InjectionException;
 import jakarta.enterprise.inject.Instance;
+import jakarta.enterprise.inject.Stereotype;
 import jakarta.enterprise.inject.UnsatisfiedResolutionException;
 import jakarta.enterprise.util.Nonbinding;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Set;
-
-import jakarta.enterprise.inject.Stereotype;
 
 /**
  * <p>
