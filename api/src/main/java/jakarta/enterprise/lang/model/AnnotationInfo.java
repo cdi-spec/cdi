@@ -13,14 +13,14 @@ public interface AnnotationInfo {
      *
      * @return target of this annotation
      */
-    AnnotationTarget target();
+    AnnotationTarget getTarget();
 
     /**
      * Declaration of this annotation's type.
      *
      * @return declaration of this annotation
      */
-    ClassInfo<?> declaration();
+    ClassInfo<?> getDeclaration();
 
     /**
      * Fully qualified name of this annotation.
@@ -28,8 +28,8 @@ public interface AnnotationInfo {
      *
      * @return fully qualified name of this annotation
      */
-    default String name() {
-        return declaration().name();
+    default String getName() {
+        return getDeclaration().name();
     }
 
     /**
@@ -39,7 +39,7 @@ public interface AnnotationInfo {
      * @return whether this annotation is repeatable
      */
     default boolean isRepeatable() {
-        return declaration().hasAnnotation(Repeatable.class);
+        return getDeclaration().hasAnnotation(Repeatable.class);
     }
 
     /**
@@ -57,14 +57,14 @@ public interface AnnotationInfo {
      * @param name attribute name
      * @return value of this annotation's attribute with given {@code name}
      */
-    AnnotationAttributeValue attribute(String name);
+    AnnotationAttributeValue getAttribute(String name);
 
     default boolean hasValue() {
         return hasAttribute("value");
     }
 
-    default AnnotationAttributeValue value() {
-        return attribute("value");
+    default AnnotationAttributeValue getValue() {
+        return getAttribute("value");
     }
 
     /**
@@ -72,5 +72,5 @@ public interface AnnotationInfo {
      *
      * @return all attributes of this annotation
      */
-    Collection<AnnotationAttribute> attributes();
+    Collection<AnnotationAttribute> getAttributes();
 }

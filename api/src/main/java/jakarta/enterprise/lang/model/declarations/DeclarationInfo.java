@@ -18,26 +18,6 @@ public interface DeclarationInfo extends AnnotationTarget {
     // TODO reevaluate the is*/as*/kind() approach (everywhere!); maybe type checks and casts are better, maybe
     //  something completely different is even better
 
-    @Override
-    default boolean isDeclaration() {
-        return true;
-    }
-
-    @Override
-    default boolean isType() {
-        return false;
-    }
-
-    @Override
-    default DeclarationInfo asDeclaration() {
-        return this;
-    }
-
-    @Override
-    default Type asType() {
-        throw new IllegalStateException("Not a type");
-    }
-
     enum Kind {
         /** Packages can be annotated in {@code package-info.java}. */
         PACKAGE,

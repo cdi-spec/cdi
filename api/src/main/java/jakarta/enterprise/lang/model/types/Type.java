@@ -1,7 +1,6 @@
 package jakarta.enterprise.lang.model.types;
 
 import jakarta.enterprise.lang.model.AnnotationTarget;
-import jakarta.enterprise.lang.model.declarations.DeclarationInfo;
 
 /**
  * Types are:
@@ -17,25 +16,6 @@ import jakarta.enterprise.lang.model.declarations.DeclarationInfo;
  * </ul>
  */
 public interface Type extends AnnotationTarget {
-    @Override
-    default boolean isDeclaration() {
-        return false;
-    }
-
-    @Override
-    default boolean isType() {
-        return true;
-    }
-
-    @Override
-    default DeclarationInfo asDeclaration() {
-        throw new IllegalStateException("Not a declaration");
-    }
-
-    @Override
-    default Type asType() {
-        return this;
-    }
 
     enum Kind {
         /** E.g. when method returns {@code void}. */
